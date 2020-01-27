@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         setUpGetMoreView()
         setUpBalancaView()
         setUpBarButtonItems()
+        setUpProfileImage()
         
     }
     
@@ -42,7 +43,10 @@ class ViewController: UIViewController {
         var leftBarItemImage = UIImage(named: "notifications_icon")
         leftBarItemImage = leftBarItemImage?.withRenderingMode(.alwaysOriginal)
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: leftBarItemImage, style: .plain, target: nil, action: nil)
-        
+    
+    }
+    
+    func setUpProfileImage(){
         let profileImageView = UIImageView(image: UIImage(named: "profile_image"))
         self.navigationItem.titleView = profileImageView
     }
